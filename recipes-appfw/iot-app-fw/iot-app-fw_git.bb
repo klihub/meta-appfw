@@ -13,7 +13,7 @@ SRC_URI = " \
     file://appfw-packet-forward.conf \
   "
 
-SRCREV = "e764dfa558e649f64f73bed7b96080f9f844c508"
+SRCREV = "ed04e87a583b3ec73c56a629533c1ff74527133a"
 
 inherit autotools pkgconfig systemd
 
