@@ -4,29 +4,29 @@
         'name':        'nodetest',
         'description': 'nodetest - NodeJS dummy test applcation.',
         'install':     'echo "Nothing to be done for installing..."',
-        'remove':      'echo "Nothing to be done for removing..."',
+        'remove':      'echo "Nothing to be done for removing..."'
     },
 
     'service': {
         'groups': [ 'iodine-nodetest' ],
         'environment': {
             'FROB': 'nicate',
-            'FOOBAR': 'xyzzy',
+            'FOOBAR': 'xyzzy'
         },
 
         'start': [
-            '/usr/bin/node /lib/node_modules/nodetest/example.js',
+            '/usr/bin/node /lib/node_modules/nodetest/example.js'
          ],
         'stop': '',
 
-        'autostart': true,
+        'autostart': true
     },
 
     'container': {
         'type': 'nspawn-app',
         'network': {
             'type': 'VirtualEthernet',
-            'ports': [ { 'proto': 'tcp', 'port': 12345, 'map': 2000 } ],
-        },
-    },
+            'ports': [ { 'proto': 'tcp', 'port': 12345, 'map': 2000 } ]
+        }
+    }
 }

@@ -4,29 +4,29 @@
         'name':        'pythontest',
         'description': 'pythontest - Python dummy test applcation.',
         'install':     'echo "Nothing to be done for installing..."',
-        'remove':      'echo "Nothing to be done for removing..."',
+        'remove':      'echo "Nothing to be done for removing..."'
     },
 
     'service': {
         'groups': [ 'foodine-pythontest' ],
         'environment': {
             'FROB': 'nicate',
-            'FOOBAR': 'xyzzy',
+            'FOOBAR': 'xyzzy'
         },
 
         'start': [
-            '/usr/bin/python /lib/python/pythontest/example.py',
+            '/usr/bin/python /lib/python/pythontest/example.py'
          ],
         'stop': '',
 
-        'autostart': true,
+        'autostart': false
     },
 
     'container': {
         'type': 'nspawn-app',
         'network': {
             'type': 'VirtualEthernet',
-            'ports': [ { 'proto': 'tcp', 'port': 27279, 'map': 27279 } ],
-        },
-    },
+            'ports': [ { 'proto': 'tcp', 'port': 27279, 'map': 27279 } ]
+        }
+    }
 }
